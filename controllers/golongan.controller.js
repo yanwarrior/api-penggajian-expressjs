@@ -55,4 +55,35 @@ golonganController.get(
   }
 );
 
+golonganController.put(
+  "/:id",
+  [authMiddleware.verifyToken],
+  async (req, res) => {
+    try {
+      const golongan = await golonganModel.findOneAndUpdate(
+        { _id: req.params.id },
+        req.body
+      );
+
+      return res.status(200).json(golongan);
+    } catch (error) {
+      return res.status(400).json({ message: "Something when wrong." });
+    }
+  }
+);
+
+golonganController.delete(
+  "/:id",
+  [authMiddleware.verifyToken],
+  async (req, res) => {
+    try {
+      await golonganModel.findOneAndDelete({ _id: req.params.id });
+
+      return res.status(204).json(null);
+    } catch (error) {
+      return res.status(400).json({ message: "Something when wrong." });
+    }
+  }
+);
+
 module.exports = golonganController;

@@ -23,18 +23,17 @@ Content-Type: application/json
 x-access-token: {{token}}
 
 
-### Edit Jabatan
-PUT {{baseUrl}}/jabatan/64afaeeee4c12921636ffede
+### Edit Golongan
+PUT {{baseUrl}}/golongan/64afcdc906deef93319ad2d3
 Content-Type: application/json
 x-access-token: {{token}}
 
 {
-  "nama": "Manager S2",
-  "tunjanganJabatan": 10000,
-  "tunjanganKeluarga": 150000
+  "nama": "Golongan A01",
+  "tunjanganGolongan": 1600000
 }
 
 ### Delete Jabatan
-DELETE {{baseUrl}}/jabatan/64afaeeee4c12921636ffede
+DELETE {{baseUrl}}/jabatan/64afcdc906deef93319ad2d3
 Content-Type: application/json
 x-access-token: {{token}}
