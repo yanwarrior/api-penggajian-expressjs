@@ -23,3 +23,15 @@ x-access-token: {{token}}
 GET {{baseUrl}}/jabatan/64afaeeee4c12921636ffede
 Content-Type: application/json
 x-access-token: {{token}}
+
+
+### Edit Jabatan
+PUT {{baseUrl}}/jabatan/64afaeeee4c12921636ffede
+Content-Type: application/json
+x-access-token: {{token}}
+
+{
+  "nama": "Manager S2",
+  "tunjanganJabatan": 10000,
+  "tunjanganKeluarga": 150000
+}

@@ -58,4 +58,23 @@ jabatanController.get(
   }
 );
 
+jabatanController.put(
+  "/:id",
+  [authMiddleware.verifyToken],
+  async (req, res) => {
+    try {
+      // Mengambil detail jabatan dari database
+      // berdasarkan id parameter
+      const jabatan = await jabatanModel.findOneAndUpdate(
+        { _id: req.params.id },
+        req.body
+      );
+
+      return res.status(400).json(jabatan);
+    } catch (error) {
+      return res.status(400).json({ message: "Something when wrong." });
+    }
+  }
+);
+
 module.exports = jabatanController;
