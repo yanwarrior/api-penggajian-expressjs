@@ -1,38 +1,38 @@
 @baseUrl = http://localhost:4001
 @token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1pcm5hQG1haWwuY29tIiwidXNlcklkIjoiNjRhZjg4ODRmMmE2ZDRmNzJiYjlkOGUwIiwiaWF0IjoxNjg5MjMzMTM2LCJleHAiOjE2ODk3MzcxMzZ9.6KHLHERwNYssocCeiEuSqB_9Zs_nM1grhGt7eNTn_SQ
 
-### Create Golongan
-POST {{baseUrl}}/golongan
+### Create Benefit
+POST {{baseUrl}}/benefit
 Content-Type: application/json
 x-access-token: {{token}}
 
 {
-  "nama": "Golongan 01",
-  "tunjanganGolongan": 1000000
+  "nama": "Uang Transport",
+  "jumlahBenefit": 300000
 }
 
-### List Golongan
-GET {{baseUrl}}/golongan
+### List Benefit
+GET {{baseUrl}}/benefit
 Content-Type: application/json
 x-access-token: {{token}}
 
-### Detail Golongan
-GET {{baseUrl}}/golongan/64afcdc906deef93319ad2d3
+### Detail Benefit
+GET {{baseUrl}}/benefit/64b07c0f03e13b4128ae64c1
 Content-Type: application/json
 x-access-token: {{token}}
 
 
-### Edit Golongan
-PUT {{baseUrl}}/golongan/64afcdc906deef93319ad2d3
+### Edit Benefit
+PUT {{baseUrl}}/benefit/64b07c0f03e13b4128ae64c1
 Content-Type: application/json
 x-access-token: {{token}}
 
 {
-  "nama": "Golongan A01",
-  "tunjanganGolongan": 1600000
+  "nama": "Uang Transportasi KRL",
+  "jumlahBenefit": 16000
 }
 
 ### Delete Jabatan
-DELETE {{baseUrl}}/jabatan/64afcdc906deef93319ad2d3
+DELETE {{baseUrl}}/jabatan/64b07c0f03e13b4128ae64c1
 Content-Type: application/json
 x-access-token: {{token}}
