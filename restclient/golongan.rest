@@ -1,0 +1,40 @@
+@baseUrl = http://localhost:4001
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1pcm5hQG1haWwuY29tIiwidXNlcklkIjoiNjRhZjg4ODRmMmE2ZDRmNzJiYjlkOGUwIiwiaWF0IjoxNjg5MjMzMTM2LCJleHAiOjE2ODk3MzcxMzZ9.6KHLHERwNYssocCeiEuSqB_9Zs_nM1grhGt7eNTn_SQ
+
+### Create Golongan
+POST {{baseUrl}}/golongan
+Content-Type: application/json
+x-access-token: {{token}}
+
+{
+  "nama": "Golongan 01",
+  "tunjanganGolongan": 1000000
+}
+
+
+### List Jabatan
+GET {{baseUrl}}/jabatan
+Content-Type: application/json
+x-access-token: {{token}}
+
+### Detail Jabatan
+GET {{baseUrl}}/jabatan/64afaeeee4c12921636ffede
+Content-Type: application/json
+x-access-token: {{token}}
+
+
+### Edit Jabatan
+PUT {{baseUrl}}/jabatan/64afaeeee4c12921636ffede
+Content-Type: application/json
+x-access-token: {{token}}
+
+{
+  "nama": "Manager S2",
+  "tunjanganJabatan": 10000,
+  "tunjanganKeluarga": 150000
+}
+
+### Delete Jabatan
+DELETE {{baseUrl}}/jabatan/64afaeeee4c12921636ffede
+Content-Type: application/json
+x-access-token: {{token}}
