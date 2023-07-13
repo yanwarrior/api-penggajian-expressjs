@@ -12,13 +12,13 @@ x-access-token: {{token}}
 }
 
 
-### List Jabatan
-GET {{baseUrl}}/jabatan
+### List Golongan
+GET {{baseUrl}}/golongan
 Content-Type: application/json
 x-access-token: {{token}}
 
-### Detail Jabatan
-GET {{baseUrl}}/jabatan/64afaeeee4c12921636ffede
+### Detail Golongan
+GET {{baseUrl}}/golongan/64afcdc906deef93319ad2d3
 Content-Type: application/json
 x-access-token: {{token}}
 

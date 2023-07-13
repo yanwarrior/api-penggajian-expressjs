@@ -30,4 +30,29 @@ golonganController.post("/", [authMiddleware.verifyToken], async (req, res) => {
   }
 });
 
+golonganController.get("/", [authMiddleware.verifyToken], async (req, res) => {
+  try {
+    // Mengambil daftar golongan dari database
+    const daftarGolongan = await golonganModel.find();
+    return res.status(200).json(daftarGolongan);
+  } catch (error) {
+    return res.status(400).json({ message: "Something when wrong." });
+  }
+});
+
+golonganController.get(
+  "/:id",
+  [authMiddleware.verifyToken],
+  async (req, res) => {
+    try {
+      // Mengambil detail golongan dari database
+      // berdasarkan id parameter
+      const golongan = await golonganModel.findOne({ _id: req.params.id });
+      return res.status(200).json(golongan);
+    } catch (error) {
+      return res.status(400).json({ message: "Something when wrong." });
+    }
+  }
+);
+
 module.exports = golonganController;
