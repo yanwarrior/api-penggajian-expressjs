@@ -70,7 +70,21 @@ jabatanController.put(
         req.body
       );
 
-      return res.status(400).json(jabatan);
+      return res.status(200).json(jabatan);
+    } catch (error) {
+      return res.status(400).json({ message: "Something when wrong." });
+    }
+  }
+);
+
+jabatanController.delete(
+  "/:id",
+  [authMiddleware.verifyToken],
+  async (req, res) => {
+    try {
+      await jabatanModel.findOneAndDelete({ _id: req.params.id });
+
+      return res.status(204).json(null);
     } catch (error) {
       return res.status(400).json({ message: "Something when wrong." });
     }

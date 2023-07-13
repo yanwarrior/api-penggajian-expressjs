@@ -35,3 +35,8 @@ x-access-token: {{token}}
   "tunjanganJabatan": 10000,
   "tunjanganKeluarga": 150000
 }
+
+### Delete Jabatan
+DELETE {{baseUrl}}/jabatan/64afaeeee4c12921636ffede
+Content-Type: application/json
+x-access-token: {{token}}
