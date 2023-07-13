@@ -1,7 +1,7 @@
 @baseUrl = http://localhost:4001
 @token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1pcm5hQG1haWwuY29tIiwidXNlcklkIjoiNjRhZjg4ODRmMmE2ZDRmNzJiYjlkOGUwIiwiaWF0IjoxNjg5MjMzMTM2LCJleHAiOjE2ODk3MzcxMzZ9.6KHLHERwNYssocCeiEuSqB_9Zs_nM1grhGt7eNTn_SQ
 
-### Sign in
+### Create Jabatan
 POST {{baseUrl}}/jabatan
 Content-Type: application/json
 x-access-token: {{token}}
@@ -12,3 +12,9 @@ x-access-token: {{token}}
   "tunjanganKeluarga": 250000,
   "tunjanganAnak": 120000
 }
+
+
+### List Jabatan
+GET {{baseUrl}}/jabatan
+Content-Type: application/json
+x-access-token: {{token}}

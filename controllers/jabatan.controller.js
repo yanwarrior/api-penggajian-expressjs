@@ -33,4 +33,14 @@ jabatanController.post("/", [authMiddleware.verifyToken], async (req, res) => {
   }
 });
 
+jabatanController.get("/", [authMiddleware.verifyToken], async (req, res) => {
+  try {
+    // Mengambil daftar jabatan dari database
+    const daftarJabatan = await jabatanModel.find();
+    return res.status(200).json(daftarJabatan);
+  } catch (error) {
+    return res.status(400).json({ message: "Something when wrong." });
+  }
+});
+
 module.exports = jabatanController;
