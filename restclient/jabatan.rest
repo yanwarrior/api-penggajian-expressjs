@@ -18,3 +18,8 @@ x-access-token: {{token}}
 GET {{baseUrl}}/jabatan
 Content-Type: application/json
 x-access-token: {{token}}
+
+### Detail Jabatan
+GET {{baseUrl}}/jabatan/64afaeeee4c12921636ffede
+Content-Type: application/json
+x-access-token: {{token}}
