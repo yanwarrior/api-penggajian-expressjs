@@ -10,5 +10,6 @@ app.use("/users", require("./controllers/user.controller"));
 app.use("/jabatan", require("./controllers/jabatan.controller"));
 app.use("/golongan", require("./controllers/golongan.controller"));
 app.use("/benefit", require("./controllers/benefit.controller"));
+app.use("/potongan", require("./controllers/potongan.controller"));
 
 module.exports = app;

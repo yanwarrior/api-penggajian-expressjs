@@ -1,0 +1,37 @@
+@baseUrl = http://localhost:4001
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1pcm5hQG1haWwuY29tIiwidXNlcklkIjoiNjRhZjg4ODRmMmE2ZDRmNzJiYjlkOGUwIiwiaWF0IjoxNjg5MjMzMTM2LCJleHAiOjE2ODk3MzcxMzZ9.6KHLHERwNYssocCeiEuSqB_9Zs_nM1grhGt7eNTn_SQ
+
+### Create Potongan
+POST {{baseUrl}}/potongan
+Content-Type: application/json
+x-access-token: {{token}}
+
+{
+  "nama": "Uang Transport",
+  "jumlahPotongan": 300000
+}
+
+### List Potongan
+GET {{baseUrl}}/potongan
+Content-Type: application/json
+x-access-token: {{token}}
+
+### Detail Potongan
+GET {{baseUrl}}/potongan/64b092987730d98c5c1ab79e
+Content-Type: application/json
+x-access-token: {{token}}
+
+### Edit Potongan
+PUT {{baseUrl}}/potongan/64b092987730d98c5c1ab79e
+Content-Type: application/json
+x-access-token: {{token}}
+
+{
+  "nama": "BPJS",
+  "jumlahPotongan": 16000
+}
+
+### Delete Potongan
+DELETE {{baseUrl}}/potongan/64b092987730d98c5c1ab79e
+Content-Type: application/json
+x-access-token: {{token}}
