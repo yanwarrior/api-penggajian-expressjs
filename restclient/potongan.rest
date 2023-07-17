@@ -7,7 +7,7 @@ Content-Type: application/json
 x-access-token: {{token}}
 
 {
-  "nama": "Uang Transport",
+  "nama": "BPJS Kesehatan",
   "jumlahPotongan": 300000
 }
 

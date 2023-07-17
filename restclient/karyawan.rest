@@ -1,0 +1,100 @@
+@baseUrl=http://localhost:4001
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1pcm5hQG1haWwuY29tIiwidXNlcklkIjoiNjRhZjg4ODRmMmE2ZDRmNzJiYjlkOGUwIiwiaWF0IjoxNjg5NTc2ODU5LCJleHAiOjE2OTAwODA4NTl9.4cR0BPs1HaDt0IPSfn_wEkDJ5P-Q5tdC971b0UOCSEU
+
+### Create Benefit
+POST {{baseUrl}}/karyawan
+Content-Type: application/json
+x-access-token: {{token}}
+
+{
+  "nama": "Andika Pranata",
+  "nik": "1123ASD",
+  "gajiPokok": 7000000,
+  "golongan": {
+    "nama": "Golongan 01",
+    "tunjanganGolongan": 1000000
+  },
+  "jabatan": {
+    "nama": "Manager",
+    "tunjanganJabatan": 50000,
+    "tunjanganKeluarga": 250000,
+    "tunjanganAnak": 120000
+  },
+  "statusPernikahan": "menikah",
+  "jumlahAnak": 2,
+  "benefit": [
+    {
+      "nama": "UANG MAKAN",
+      "jumlahBenefit": 15000
+    },
+    {
+      "nama": "UANG TRANSPORT",
+      "jumlahBenefit": 300000
+    }
+  ],
+  "potongan": [
+    {
+      "nama": "BPJS KESEHATAN",
+      "jumlahPotongan": 300000
+    }
+  ]
+}
+
+### List Karyawan
+GET {{baseUrl}}/karyawan
+Content-Type: application/json
+x-access-token: {{token}}
+
+### Detail Karyawan
+GET {{baseUrl}}/karyawan/64b4e60ce41246b0de3a3dae
+Content-Type: application/json
+x-access-token: {{token}}
+
+
+### Edit Karyawan
+PUT {{baseUrl}}/karyawan/64b4e60ce41246b0de3a3dae
+Content-Type: application/json
+x-access-token: {{token}}
+
+{
+  "nama": "Andika Pranata",
+  "nik": "1123ASD",
+  "gajiPokok": 7000000,
+  "golongan": {
+    "nama": "Golongan 01",
+    "tunjanganGolongan": 1000000
+  },
+  "jabatan": {
+    "nama": "Manager",
+    "tunjanganJabatan": 50000,
+    "tunjanganKeluarga": 250000,
+    "tunjanganAnak": 120000
+  },
+  "statusPernikahan": "menikah",
+  "jumlahAnak": 2,
+  "benefit": [
+    {
+      "nama": "UANG MAKAN",
+      "jumlahBenefit": 15000
+    },
+    {
+      "nama": "UANG TRANSPORT",
+      "jumlahBenefit": 300000
+    }
+  ],
+  "potongan": [
+    {
+      "nama": "BPJS KESEHATAN",
+      "jumlahPotongan": 300000
+    },
+    {
+      "nama": "BPJS KETENAGAKERJAAN",
+      "jumlahPotongan": 500000
+    }
+  ]
+}
+
+### Delete Karyawan
+DELETE {{baseUrl}}/karyawan/64b4e60ce41246b0de3a3dae
+Content-Type: application/json
+x-access-token: {{token}}

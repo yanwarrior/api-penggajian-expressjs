@@ -32,7 +32,7 @@ x-access-token: {{token}}
   "jumlahBenefit": 16000
 }
 
-### Delete Jabatan
-DELETE {{baseUrl}}/jabatan/64b07c0f03e13b4128ae64c1
+### Delete Benefit
+DELETE {{baseUrl}}/benefit/64b07c0f03e13b4128ae64c1
 Content-Type: application/json
 x-access-token: {{token}}
