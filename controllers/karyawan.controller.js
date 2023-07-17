@@ -14,7 +14,6 @@ karyawanController.post("/", [authMiddleware.verifyToken], async (req, res) => {
       statusPernikahan,
       jumlahAnak,
       benefit,
-      karyawan,
     } = req.body;
 
     // Validasi body
