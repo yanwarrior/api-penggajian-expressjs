@@ -14,20 +14,12 @@ karyawanController.post("/", [authMiddleware.verifyToken], async (req, res) => {
       statusPernikahan,
       jumlahAnak,
       benefit,
+      potongan,
     } = req.body;
 
     // Validasi body
     if (
-      !(
-        nama &&
-        nik &&
-        gajiPokok &&
-        golongan &&
-        jabatan &&
-        statusPernikahan &&
-        jumlahAnak &&
-        benefit
-      )
+      !(nama && nik && gajiPokok && golongan && jabatan && statusPernikahan)
     ) {
       return res.status(400).json({ message: "All data required." });
     }

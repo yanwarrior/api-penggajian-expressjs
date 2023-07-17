@@ -12,5 +12,6 @@ app.use("/golongan", require("./controllers/golongan.controller"));
 app.use("/benefit", require("./controllers/benefit.controller"));
 app.use("/potongan", require("./controllers/potongan.controller"));
 app.use("/karyawan", require("./controllers/karyawan.controller"));
+app.use("/gaji", require("./controllers/gaji.controller"));
 
 module.exports = app;

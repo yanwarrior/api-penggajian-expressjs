@@ -21,13 +21,13 @@ const karyawanSchema = new mongoose.Schema({
   jumlahAnak: { type: Number, default: 0 },
   benefit: [
     {
-      nama: { type: String, unique: true },
+      nama: { type: String },
       jumlahBenefit: { type: Number, default: 0 },
     },
   ],
   potongan: [
     {
-      nama: { type: String, unique: true },
+      nama: { type: String },
       jumlahPotongan: { type: Number, default: 0 },
     },
   ],
