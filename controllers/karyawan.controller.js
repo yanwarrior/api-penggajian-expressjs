@@ -27,8 +27,7 @@ karyawanController.post("/", [authMiddleware.verifyToken], async (req, res) => {
         jabatan &&
         statusPernikahan &&
         jumlahAnak &&
-        benefit &&
-        karyawan
+        benefit
       )
     ) {
       return res.status(400).json({ message: "All data required." });
