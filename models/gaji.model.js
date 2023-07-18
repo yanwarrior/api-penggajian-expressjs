@@ -2,11 +2,12 @@ const mongoose = require("mongoose");
 
 const gajiSchema = new mongoose.Schema({
   tanggal: { type: Date },
+  bulan: { type: Number },
   totalPendapatan: { type: Number },
   totalPotongan: { type: Number },
   gajiBersih: { type: Number },
   keterangan: { type: String, default: "" },
-  karyawan: { type: String },
+  nik: { type: String },
   nama: { type: String },
   golongan: { type: String },
   jabatan: { type: String },
